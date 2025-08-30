@@ -5,13 +5,32 @@
     <link href="/logo_small.png" rel="icon" type="image/svg+xml"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title></title>
-  <script type="module" crossorigin src="/themes/2024/assets/index-CL9mnhPI.js"></script>
+
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        position: relative !important; /* 关键：作为页脚定位的参照物 */
+        margin: 0 !important;
+        min-height: 100% !important;
+        padding-bottom: 90px !important; /* 关键：在页面底部留出90px的空白区域给页脚 */
+        box-sizing: border-box !important;
+      }
+      footer {
+        position: absolute !important; /* 关键：使用绝对定位 */
+        bottom: 0 !important; /* 关键：钉在父元素(body)的底部 */
+        width: 100% !important;
+        height: 90px !important; /* 关键：页脚自身的高度，要和body的padding-bottom一致 */
+      }
+    </style>
+    <script type="module" crossorigin src="/themes/2024/assets/index-CL9mnhPI.js"></script>
   <link rel="stylesheet" crossorigin href="/themes/2024/assets/index-gMRRgN5l.css">
 </head>
 <body>
 <div id="app"></div>
 
-<footer style="text-align: center; padding: 20px; color: #888;">
+<footer style="text-align: center; padding: 20px; color: #888; box-sizing: border-box;">
     <p>
         <a href="https://status.zhou.su" target="_blank" style="margin-right: 15px; color: #888; text-decoration: none;">服务状态</a>
         <a href="https://zhou.su" target="_blank" style="color: #888; text-decoration: none;">网址导航</a>
@@ -20,5 +39,6 @@
         Powered by sansan
     </p>
 </footer>
+
 </body>
 </html>
